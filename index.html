@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>QR-CODE CLIENT</title>
+ <script src="https://widget.northeurope.cloudapp.azure.com:9443/v0.1.0/mobile-money-widget-mtn.js"></script>
+ <script src="https://github.com/davidshimjs/qrcodejs"></script>
+
+                    <!--________________CALL BOOTSTRAP EXTERNAL PACKAGE____________________-->
+                        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+
+                        <script src="bootstrap-3.3.7-dist/jquery.min.js" ></script>
+
+
+                        <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" ></script>
+                        <!--________________END BOOTSTRAP EXTERNAL PACKAGE____________________-->
+
+                        <link rel="stylesheet" href="css/snapandpay.css">
+
+</head>
+
+</head>
+
+
+
+
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">
+      <img src="images/qr-code-laptop-phone.png" class="img-circle" alt="New York" width="90" height="90">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="#tour">HOME</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+
+  <div class="container">
+    <h3 class="text-center">SNAP AND PAY</h3>
+    <p class="text-center"> Pay with no Stress.<br> Through our Mobile and Web Application!</p>
+    <ul class="list-group">
+      <li class="list-group-item">  <span class="label label-danger"> PROCEDURE : </span></li>
+    </ul>
+    
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/qr-code-laptop.png" alt="Paris" width="400" height="300">
+          <p><strong> Click the "SnapAndPay Button" to Generate the QR-CODE on the Web Portal.</strong></p>
+          <p style="color: #00cc66;">STEP 1</p>
+          <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> -->
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/qr-code-laptop-phone.png" alt="New York" width="400" height="300">
+          <p><strong>Scan the Generated QR-CODE with Your Mobile Device to Initialise Payment.</strong></p>
+          <p style="color: #00cc66;">STEP 2</p>
+          <!-- <button class="btn" data-toggle="modal" data-target="#myModal">Buy Tickets</button> -->
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="images/pay.png" alt="San Francisco" width="400" height="300">
+          <p><strong>START PAYMENTS !!!</strong></p>
+          <p></p>
+
+          <button class="btn" style="background-color: #00cc66;" data-toggle="modal" data-target="#myModal" title="Click To Pay Your Bill">SnapAndPay</button> 
+
+         <!--  <div  id="qrcodeLoader" class="mobile-money-qr-payment" title="Click To Pay Your Bill">SnapAndPay</div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> SnapAndPay</h4>
+        </div>
+        <div class="modal-body">
+
+         <!--  <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form> -->
+           <div  id="qrcodeLoader" class="mobile-money-qr-payment" title="Click To Pay Your Bill">SnapAndPay</div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em> Fill out the Form!</em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>SnapAndPay with/Thro us.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Limbe, CAMEROON.</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +237 </p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: snapandpay@mail.com</p>    
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>      
+    </div>
+  </div>
+  <br>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>   <a href="../index.html" data-toggle="tooltip" title="Visit snapandpay">www.snapandpay.com</a></p> 
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+
+            var amount = Math.floor(Math.random()*19)+1;
+            console.log("amount is "+amount);
+            var momoQRcode = document.getElementById("qrcodeLoader");
+            momoQRcode.setAttribute("data-api-user-id", "99194acb-c435-4961-8d70-63aa9b3dadfe");    
+            momoQRcode.setAttribute("data-amount", amount);
+            momoQRcode.setAttribute("data-currency", "XAF");
+            momoQRcode.setAttribute("data-external-id", "144-123-323");
+            momoQRcode.addEventListener("mobile-money-qr-payment-created", function (event) {
+                  console.log("Invoice:", event.detail);
+                  var tagChilds = momoQRcode.children;
+                  var firstDivChild = tagChilds[0].children;
+                  var imgQrCode  = firstDivChild[2].children;
+ 
+                   //var divForQrCodeLoading = firstDivChild[2];
+                   imgQrCode[1].parentNode.removeChild(imgQrCode[1]);
+                   const amount = event.detail.amount;
+                   const currency = event.detail.currency;
+                   const invoiceId = event.detail.invoiceId;
+                   
+                   const payee = event.detail.payeeFirstName+" "+event.detail.payeeLastName;
+                   const paymentReference = event.detail.paymentReference;
+                   const referenceId = event.detail.referenceId;
+                   const status = event.detail.status;
+
+                       var qrcode = new QRCode(firstDivChild[2], {
+                        text: "{amount :"+amount+",invoiceId :"+invoiceId+",currency :"+currency+",payee :"+payee+",paymentReference :"+paymentReference+",referenceId :"+referenceId+",status :"+status+"}",
+                        width: 100,
+                        height: 100,
+                        colorDark : "#000000",
+                        colorLight : "#ffffff",
+                        correctLevel : QRCode.CorrectLevel.H
+                  });
+                 var imgGeneratedQrCode= firstDivChild[2].children;
+                 imgGeneratedQrCode[2].setAttribute("style", "display: block; padding: 5px; background-color: white");
+
+
+                });
+
+           
+
+
+
+      
+
+
+
+
+
+/*
+if(amount>=1 && amount<19){
+	momoPayment.addEventListener("mobile-money-qr-payment-failed", function (event) {
+        console.log("Invoice:", event.detail);
+        });
+}else{
+}*/
+/*
+momoPayment.addEventListener("mobile-money-qr-payment-canceled", function (event) {
+      console.log("Invoice:", event.detail);
+    });
+momoPayment.addEventListener("mobile-money-qr-payment-successful", function (event) {
+      console.log("Invoice:", event.detail);
+    });
+*/
+
+/*
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	text: "http://jindo.dev.naver.com/collie",
+	width: 128,
+	height: 128,
+	colorDark : "#000000",
+	colorLight : "#ffffff",
+	correctLevel : QRCode.CorrectLevel.H
+});*/
+</script>
+
+</body>
+</html>
